@@ -1,20 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { Text, View } from "react-native";
+import { Link } from "expo-router";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
+    <View className="flex-1 items-center justify-center bg-white"> 
+       {/* View is called as div in native */}
+      <Text className="text-3xl font-pblack">Hello World</Text>
       <StatusBar style="auto" />
+      <Link href={"/profile"} style={{ color: "blue" }}>  {/* To add Link */}
+        Go to Profile
+      </Link>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
