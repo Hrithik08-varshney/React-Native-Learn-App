@@ -8,8 +8,8 @@ export default function App() {
        {/* View is called as div in native */}
       <Text className="text-3xl font-pblack">Hello World</Text>
       <StatusBar style="auto" />
-      <Link href={"/profile"} style={{ color: "blue" }}>  {/* To add Link */}
-        Go to Profile
+      <Link href={"/home"} style={{ color: "blue" }}>  {/* To add Link */}
+        Home
       </Link>
     </View>
   );
