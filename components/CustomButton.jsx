@@ -26,4 +26,3 @@ const CustomButton = ({
 
 export default CustomButton;
 
-//1:09:30
