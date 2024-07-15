@@ -22,21 +22,22 @@ const RootLayout = () => {
     if (error) throw error; //if error then return error
 
     if (fontsLoaded) {
-      SplashScreen.hideAsync();  //if fonts loaded then showing the splash screen
+      SplashScreen.hideAsync(); //if fonts loaded then showing the splash screen
     }
   }, [fontsLoaded, error]);
 
-  if (!fontsLoaded && !error) { //if we have error in both then nothing to show
+  if (!fontsLoaded && !error) {
+    //if we have error in both then nothing to show
     return null;
   }
 
   return (
     <>
-      {/* <Text>Header</Text>
-      <Slot />
-      <Text>Footer</Text> */}
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        {/* <Stack.Screen name="/search/[query]" options={{ headerShown: false }} /> */}
       </Stack>
     </>
   );
