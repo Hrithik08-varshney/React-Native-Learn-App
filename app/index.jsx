@@ -7,7 +7,8 @@ import CustomButton from "../components/CustomButton";
 import { useGlobalContext } from "../context/GlobalProvider";
 export default function App() {
   const { isLoading, isLoggedIn } = useGlobalContext();
-  if (!isLoading && isLoggedIn) return <Redirect href={"/home"} />;
+  const val = localStorage.getItem("signUpState");
+  if ((!isLoading && isLoggedIn) || val) return <Redirect href={"/home"} />;
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView

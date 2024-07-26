@@ -24,7 +24,7 @@ const SignUp = () => {
     try {
       const result = await createUser(form);
       //set it to global state....
-
+      localStorage.setItem("signUpState", result);
       router.replace("/home");
     } catch (error) {
       Alert.alert("Error", error.message);
