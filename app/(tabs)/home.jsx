@@ -67,4 +67,3 @@ const Home = () => {
 
 export default Home;
 
-//2:28:05
